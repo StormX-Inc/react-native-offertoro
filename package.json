@@ -1,0 +1,15 @@
+{
+  "name": "react-native-offertoro",
+  "version": "1.0.0",
+  "description": "A react-native interface for using OfferToro",
+  "main": "index.js",
+  "author": "Felipe Almeida <felipe@stormx.io>",
+  "peerDependencies": {
+    "react-native": ">=0.31.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:StormX-Inc/react-native-offertoro.git"
+  },
+  "license": "MIT"
+}
