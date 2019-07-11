@@ -11,6 +11,7 @@ import com.offertoro.sdk.sdk.OffersInit;
 public class MainActivity extends AppCompatActivity implements OfferWallListener {
 
     private static final String TAG = "OfferToroSDK";
+    boolean started = false;
 
     public static final String appId = "appId";
     public static final String secretKey = "secretKey";
@@ -26,6 +27,17 @@ public class MainActivity extends AppCompatActivity implements OfferWallListener
     }
 
     @Override
+    protected void onResume() {
+        super.onResume();
+
+        if (started) {
+            Log.d(TAG, "onResume");
+            started = false;
+            this.finish();
+        }
+    }
+
+    @Override
     public void onOTOfferWallInitSuccess() {
         Log.d(TAG, "onOTOfferWallInitSuccess");
     }
@@ -38,6 +50,7 @@ public class MainActivity extends AppCompatActivity implements OfferWallListener
 
     @Override
     public void onOTOfferWallOpened() {
+        started = true;
         Log.d(TAG, "onOTOfferWallOpened");
     }
 
