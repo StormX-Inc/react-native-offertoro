@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity implements OfferWallListener
     @Override
     public void onOTOfferWallInitSuccess() {
         Log.d(TAG, "onOTOfferWallInitSuccess");
+        this.finish();
     }
 
     @Override
